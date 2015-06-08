@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Lista de profesionales</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	</head>
+	<body>
+		<h1>Lista de profesionales: </h1>
+		{% for profesional in profesionalesListaObjetos %}
+			<table class="table table-bordered">
+				<tr>
+					<th>Nombre</th> <td>{{profesional.nombre}}</td>
+				</tr>
+				<tr>
+					<th>Apellido</th>
+					<td>{{profesional.apellido}}</td>
+				</tr>
+				<tr>
+					<th>DNI</th>
+					<td>{{profesional.documento}}</td>
+				</tr>
+				<tr>
+					<th>Telefono</th>
+					<td>{{profesional.telefono}}</td>
+				</tr>
+				<tr>
+					<th>Especialidad</th>
+					<td>{{profesional.especialidad}}</td>
+				</tr>
+				<tr>
+					<th>E-mail</th>
+					<td>{{profesional.email}}</td>
+				</tr>
+				<!-- <li><b>Clave: </b>{{profesional.clave}}</li> -->
+				<!-- <li><b>Reingresar Clave: </b>{{profesional.reingresarclave}}</li>-->
+			</table>
+			<br>
+		{%endfor%}
+	</body>
+</html>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
