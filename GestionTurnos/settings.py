@@ -10,6 +10,8 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from django.conf.global_settings import TEMPLATE_DIRS, LOGIN_URL,\
+    LOGIN_REDIRECT_URL, LOGOUT_URL
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -24,6 +26,11 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
+TEMPLATE_DIRS=(
+                os.path.join(BASE_DIR, 'templates'),
+               )
+
+
 ALLOWED_HOSTS = []
 
 
@@ -36,8 +43,17 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'GestionT',
+    'apps.inicio',
+    'apps.clientes',
+    'apps.profesionales',
+    'apps.turnos',
+    'bootstrap3',
 )
+
+from django.core.urlresolvers import reverse_lazy
+LOGIN_URL=reverse_lazy('login')
+LOGIN_REDIRECT_URL=reverse_lazy('login')
+LOGOUT_URL=reverse_lazy('logout')
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
