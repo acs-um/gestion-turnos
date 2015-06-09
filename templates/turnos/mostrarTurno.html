@@ -5,15 +5,11 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	</head>
 	<body>
-		<div class="container">
+		<div class="container-fluid">
 			<h1>Lista de Turnos</h1>
 			{% for turno in turnoListaObjetos %}
 			
 			<table class="table table-bordered">
-					<tr>
-						<th>ID</th>
-						<th>{{turno.id}}</th>
-					</tr>
 					<tr>
 						<th>Estado</th>
 						<td>{{turno.estado}}</td>
