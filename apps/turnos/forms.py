@@ -3,16 +3,12 @@ from apps.turnos.models import Turno
 from django.forms import ModelForm
 from apps.profesionales.models import Profesional
 
-class TurnoFrom(ModelForm):
-    pro = forms.ModelChoiceField(Profesional.objects.all(),required=True)
+
+class TurnoForm(ModelForm):
+    pro = forms.ModelChoiceField(Profesional.objects.all(), required = True)
+    
     
     class Meta:
-        model =Turno;
-        fields =('pro','fechahora', 'comentario',)
-        
-class TurnoBorrarFrom(ModelForm):
-   
+        model = Turno;
+        fields = ("pro", "fechahora", "comentario",)
     
-    class Meta:
-        model =Turno;
-        fields =('comentario',)

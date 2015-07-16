@@ -1,0 +1,40 @@
+{# Load the tag library #}
+{% load bootstrap3 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+{# Display a form #}
+<<<<<<< HEAD
+<form method="post" class="form">
+	{% csrf_token %}
+  	{% bootstrap_form form %}
+  	{% buttons %}
+	    <button type="submit" class="btn btn-primary">
+	      	{% bootstrap_icon "ok-sign" %} Aceptar
+	    </button>
+	    <button type="reset" class="btn btn-danger">
+	      	{% bootstrap_icon "remove-sign" %} Limpiar
+	    </button>
+  	{% endbuttons %}
+=======
+<div class="container-fluid">
+	<form method="post" class="form">
+		{% csrf_token %}
+		
+		{% bootstrap_form form %}
+		  	{% buttons %}
+			    <button type="submit" class="btn btn-primary">
+			      	{% bootstrap_icon "ok-sign" %} Aceptar
+			    </button>
+			    <button type="reset" class="btn btn-danger">
+			      	{% bootstrap_icon "remove-sign" %} Limpiar
+			    </button>
+		  	{% endbuttons %}
+</form>
+</div>
+>>>>>>> 3 Registrar Turno
