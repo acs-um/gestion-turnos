@@ -5,37 +5,39 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	</head>
 	<body>
-		<h1>Lista de clientes: </h1>
-		{% for cliente in clientesListaObjetos %}
-			<table class="table table-bordered">
-				<tr>
-					<th>Nombre</th> <td>{{cliente.nombre}}</td>
-				</tr>
-				<tr>
-					<th>Apellido</th>
-					<td>{{cliente.apellido}}</td>
-				</tr>
-				<tr>
-					<th>DNI</th>
-					<td>{{cliente.documento}}</td>
-				</tr>
-				<tr>
-					<th>Telefono</th>
-					<td>{{cliente.telefono}}</td>
-				</tr>
-				<tr>
-					<th>Obra Social</th>
-					<td>{{cliente.obrasocial}}</td>
-				</tr>
-				<tr>
-					<th>E-mail</th>
-					<td>{{cliente.email}}</td>
-				</tr>
-				<!-- <li><b>Clave: </b>{{cliente.clave}}</li> -->
-				<!-- <li><b>Reingresar Clave: </b>{{cliente.reingresarclave}}</li>-->
-			</table>
-			<br>
-		{%endfor%}
+		<div class="container-fluid">
+			<h1>Lista de clientes: </h1>
+			{% for cliente in clientesListaObjetos %}
+				<table class="table table-bordered">
+					<tr>
+						<th>Nombre</th> <td>{{cliente.nombre}}</td>
+					</tr>
+					<tr>
+						<th>Apellido</th>
+						<td>{{cliente.apellido}}</td>
+					</tr>
+					<tr>
+						<th>DNI</th>
+						<td>{{cliente.documento}}</td>
+					</tr>
+					<tr>
+						<th>Telefono</th>
+						<td>{{cliente.telefono}}</td>
+					</tr>
+					<tr>
+						<th>Obra Social</th>
+						<td>{{cliente.obrasocial}}</td>
+					</tr>
+					<tr>
+						<th>E-mail</th>
+						<td>{{cliente.email}}</td>
+					</tr>
+					<!-- <li><b>Clave: </b>{{cliente.clave}}</li> -->
+					<!-- <li><b>Reingresar Clave: </b>{{cliente.reingresarclave}}</li>-->
+				</table>
+				<br>
+			{%endfor%}
+		</div>
 	</body>
 </html>
 
