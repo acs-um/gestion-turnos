@@ -5,29 +5,29 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	</head>
 	<body>
-		<div class="container-fluid">
-			<h1>Lista de Turnos</h1>
-			{% for turno in turnoListaObjetos %}
-			
-			<table class="table table-bordered">
-					<tr>
-						<th>Estado</th>
-						<td>{{turno.estado}}</td>
-					</tr>
-					<tr>
-						<th>Fecha y Hora</th>
-						<td>{{turno.fechahora}}</td>
-					</tr>
-					<tr>
-						<th>Comentario</th>
-						<td>{{turno.comentario}}</td>
-					</tr>
-					<tr>
-						<th>Profesional</th>
-						<td>{{turno.pro}}</td>
-					</tr>
-				</table>
-			{%endfor%}
-		</div>
+		<h1>Lista de Turnos</h1>
+		{% for turno in turnoListaObjetos %}
+		
+		<table class="table table-bordered">
+				
+				<tr>
+					<th>Estado</th>
+					<td>{{turno.estado}}</td>
+				</tr>
+				<tr>
+					<th>Fecha y Hora</th>
+					<td>{{turno.fechahora}}</td>
+				</tr>
+				<tr>
+					<th>Comentario</th>
+					<td>{{turno.comentario}}</td>
+				</tr>
+				<tr>
+					<th>Profesional</th>
+					<td>{{turno.pro}}</td>
+				</tr>
+				<a class="btn btn-danger" href="{% url 'eliminar_turno' turno.pk %}" >Borrar</a>
+			</table>
+		{%endfor%}
 	</body>
 </html>
