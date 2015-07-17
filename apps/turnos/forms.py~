@@ -7,11 +7,16 @@ from apps.profesionales.models import Profesional
 class TurnoForm(ModelForm):
     pro = forms.ModelChoiceField(Profesional.objects.all(), required = True)
     
-
+<<<<<<< HEAD
     class Meta:
         model =Turno;
         fields =('pro','fechahora', 'comentario',)
         
 class TurnoBorrarFrom(ModelForm):
-
+=======
+    
+>>>>>>> develop
+    class Meta:
+        model = Turno;
+        fields = ("pro", "fechahora", "comentario",)
     
