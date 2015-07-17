@@ -28,3 +28,15 @@ class mostrarTurno(ListView):
     template_name='turnos/mostrarTurno.html'
     model=Turno
     context_object_name= 'turnoListaObjetos'
+    
+class borrarTurno(UpdateView):
+    model=Turno
+    form_class= TurnoBorrarFrom
+    template_name= 'turnos/borrarTurno.html'
+    
+    def form_valid(self, form):
+        self.object=form.save(commit=False)
+        self.object.usu=self.request.user
+        self.object.estado="Cancelado"
+        self.object.save()
+        return HttpResponseRedirect(reverse_lazy('mostrar_turno'))
