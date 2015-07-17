@@ -12,6 +12,7 @@ class TurnoForm(ModelForm):
         model =Turno;
         fields =('pro','fechahora', 'comentario',)
         
+        
 class TurnoBorrarFrom(ModelForm):
 
     
