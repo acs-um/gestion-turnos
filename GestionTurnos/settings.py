@@ -11,8 +11,17 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 from django.conf.global_settings import TEMPLATE_DIRS, LOGIN_URL,\
-    LOGIN_REDIRECT_URL, LOGOUT_URL
+    LOGIN_REDIRECT_URL, LOGOUT_URL, EMAIL_USE_TLS, EMAIL_HOST, EMAIL_HOST_USER, EMAIL_PORT,\
+    EMAIL_HOST_PASSWORD
+    
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'gestionturnosum@gmail.com'
+EMAIL_HOST_PASSWORD = 'gestionturnos123'
+EMAIL_PORT = 587
 
 
 # Quick-start development settings - unsuitable for production
@@ -47,6 +56,7 @@ INSTALLED_APPS = (
     'apps.clientes',
     'apps.profesionales',
     'apps.turnos',
+    'apps.secretarios',
     'bootstrap3',
 )
 

@@ -14,4 +14,7 @@ urlpatterns = patterns('',
    url(r'^turno/', include('apps.turnos.urls')),
    #PROFESIONALES
    url(r'^profesional/', include('apps.profesionales.urls')),
+   #SECRETARIOS
+   url(r'^secretario/', include('apps.secretarios.urls')),
+   
 )

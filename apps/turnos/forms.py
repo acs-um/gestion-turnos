@@ -14,5 +14,7 @@ class TurnoForm(ModelForm):
         
         
 class TurnoBorrarFrom(ModelForm):
-
+    class Meta:
+        model =Turno;
+        fields =('comentario',)
     

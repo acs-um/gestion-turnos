@@ -1,5 +1,4 @@
 from django.db import models
-from apps.clientes.models import Cliente
 from django.contrib.auth.models import User
 from apps.profesionales.models import Profesional
 
@@ -10,3 +9,4 @@ class Turno(models.Model):
     estado=models.CharField(max_length=50)
     fechahora=models.DateTimeField()
     comentario= models.TextField()
+    notificado=models.BooleanField(default = False)
